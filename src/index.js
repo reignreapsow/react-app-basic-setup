@@ -1,21 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './../sass.config'
 
-function Welcome(props) {
+
+const title = "Default React App";
+const subtitle = 'Put your life in the hands of a computer'
+//ES6 Array
+const options = ['Thing One', 'Thing Two', 'Thing Three'];
+
+
+
+class App extends React.Component {
+  render() {
     return (
-        <h1>Hello, {props.name}</h1>
+      <div>
+        {/* REFERENCE THE VARIABLES */}
+        <Header title={title} subtitle={subtitle} />
+        <Action />
+        <Options options={options} />
+        <AddOption />
+      </div>
     )
+  }
 }
-
-function App() {
-    return(
-        <div>
-            <Welcome name="React is working" />
-        </div>
-    );
-}
-
-
 
 
 
